@@ -1,0 +1,462 @@
+﻿.modal-login {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background-image: url("../../background/login-background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    overflow: auto;
+}
+
+.modal-login {
+    scrollbar-width: thin;
+    scrollbar-color: transparent;
+}
+
+    .modal-login::-webkit-scrollbar {
+        width: 1px;
+    }
+
+    .modal-login::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .modal-login::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 0px;
+        border: 0px solid transparent;
+    }
+
+    .modal-login .close-modal-login-and-register {
+        z-index: 12;
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: lightgray;
+        margin-right: 24px;
+        margin-top: 16px;
+        cursor: pointer;
+    }
+
+        .modal-login i:hover {
+            color: #f9ca24;
+        }
+
+.register {
+    z-index: 13;
+    display: none;
+}
+
+.login {
+    z-index: 12;
+}
+
+.password-reset {
+    z-index: 14;
+    display: none;
+}
+
+.new-password {
+    z-index: 14;
+    display: none;
+}
+
+.authenticate-header {
+    font-family: 'Emblema One', cursive;
+    font-size: 5.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 33px;
+}
+
+.alternative {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+    .alternative p {
+        text-align: center !important;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: #353536;
+    }
+
+    .alternative button {
+        font-size: 1.5rem;
+        border: none;
+        background-color: white;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 600;
+    }
+
+        .alternative button span {
+            position: relative;
+            left: 24px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .alternative button:hover span {
+            left: 0px;
+            text-decoration: underline;
+        }
+
+        .alternative button::after {
+            content: '\f2f6';
+            font-family: "Font Awesome 5 Free";
+            opacity: 0;
+            padding-left: 12px;
+            position: relative;
+            left: -20px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .alternative button:hover::after {
+            opacity: 1;
+            left: 0px;
+        }
+
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+
+.page-login-button {
+    width: 100%;
+    background-image: linear-gradient(135deg, #0652DD, #0097e6);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 35px;
+    border-width: 0px;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    transition: all 0.5s ease-in-out;
+}
+
+    .page-login-button:hover {
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1.8rem rgba(6, 82, 221, 0.5), .125rem .125rem 1.8rem rgba(0, 151, 230, 0.5);
+    }
+
+    .page-login-button span {
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        right: -27px;
+    }
+
+    .page-login-button:hover span {
+        right: 0px;
+    }
+
+    .page-login-button span::after {
+        content: '\f058';
+        font-family: "Font Awesome 5 Free";
+        opacity: 0;
+        padding-left: 18px;
+        position: relative;
+        left: -40px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .page-login-button:hover span::after {
+        opacity: 1;
+        left: 0px;
+    }
+
+.modal-login .card-body {
+    padding: 2rem !important;
+}
+
+.modal-login .register-input {
+    width: 100%;
+    border-width: 0px 0px 2px 0px;
+    border-color: black;
+    border-style: solid;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+}
+
+    .modal-login .register-input::placeholder {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 600;
+        color: #c3c1c9;
+    }
+
+    .modal-login .register-input:focus {
+        border-image: linear-gradient(45deg, #004aad, #7b20c5) 1;
+        border-width: 0px 0px 4px 0px;
+        outline: none;
+    }
+
+            .register-input:focus + .register-label {
+                background: -webkit-linear-gradient(45deg, #004aad, #7b20c5);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .register-input:focus::placeholder {
+                background: -webkit-linear-gradient(45deg, #004aad, #7b20c5);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+    .modal-login .register-label {
+        color: gray;
+        font-family: 'Arvo', serif;
+        font-size: 1.1rem;
+        margin-top: 5px;
+    }
+
+.password-forgot {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #353536;
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+    .password-forgot:hover {
+        color: black !important;
+        text-decoration: underline;
+        outline: none;
+        background-color: transparent;
+        border: none;
+    }
+
+.password-div {
+    text-align: end;
+}
+
+.alert-register {
+    display: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: #d63031;
+    border-color: #d63031;
+    border: 2px solid;
+}
+
+.alert-register-reset-fail {
+    font-size: 1.1725rem !important;
+}
+
+.alert-password-reset-success {
+    display: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    padding: 0.5rem;
+    font-size: 1.1725rem;
+    border-color: #0f5132;
+    border: 2px solid;
+}
+
+.backdrop {
+    z-index: 19;
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    display: none;
+}
+
+.Register-Success {
+    z-index: 20;
+    text-align: center;
+    background-color: #f5fdf0;
+    animation: popUpModalLogin 0.75s ease-in-out;
+    display: none;
+    position: fixed;
+    top: 105px;
+    left: 0px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
+}
+
+.Login-Success {
+    z-index: 20;
+    text-align: center;
+    background-color: #f5fdf0;
+    animation: popUpModalLogin 0.75s ease-in-out;
+    display: none;
+    position: fixed;
+    top: 105px;
+    left: 0px; 
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
+}
+
+@keyframes popUpModalLogin {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px)
+
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(100px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+.close-modal-login {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+    .close-modal-login:hover {
+        animation: closeButtonAnimation 0.5s ease-in-out;
+    }
+
+@keyframes closeButtonAnimation {
+    0% {
+        transform: scale(1)
+    }
+
+    33% {
+        transform: scale(0.78)
+    }
+
+    66% {
+        transform: scale(1.22)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+.created-account-modal {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.modal-login-icon-success {
+    padding: 45px;
+    background-color: #218c74;
+    color: white;
+    border-top-left-radius: 25px; 
+    border-top-right-radius: 25px;
+}
+
+.modal-login-success-content h2 {
+    margin-top: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 2.3rem;
+    color: #1E3A5C;
+}
+
+.modal-login-success-content h4 {
+    margin-top: 13px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #1E3A5C;
+}
+
+.modal-login-success-content h6 {
+    font-family: 'Arvo', serif;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 14px;
+    font-size: 1.36rem;
+    color: #1E3A5C;
+}
+
+.modal-login-success-button {
+    margin-bottom: 30px;
+}
+
+    .modal-login-success-button button {
+        background-color: #1dd1a1;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 600;
+        font-size: 1.6rem;
+        padding: 1px 27px 6px 60px;
+        border-radius: 30px;
+        color: white;
+        border: 2px solid;
+        border-color: #16a085;
+        margin-top: 5px;
+        transition: all 0.5s ease-in-out;
+        box-shadow: none;
+    }
+
+        .modal-login-success-button button:hover {
+            background-color: ghostwhite;
+            border-color: #01a3a4;
+            box-shadow: 0px 0px 6px 0px rgba(66, 68, 90, 1);
+        }
+
+        .modal-login-success-button button span {
+            display: inline-block;
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .modal-login-success-button button div {
+            display: inline-block;
+            border: 1px solid #079992;
+            height: 35px;
+            margin-left: 45px;
+            margin-right: 27px;
+            position: relative;
+            top: 8px;
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .modal-login-success-button button i {
+            display: inline-block;
+            position: relative;
+            right: 0;
+            color: white;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .modal-login-success-button button:hover span {
+            opacity: 0;
+        }
+
+        .modal-login-success-button button:hover div {
+            opacity: 0;
+        }
+
+        .modal-login-success-button button:hover i {
+            position: relative;
+            right: 85px;
+            color: #01a3a4;
+        }
+
+        .modal-login-success-button button:hover .dashboard-redirect {
+            right: 120px !important;
+        }

@@ -1,0 +1,326 @@
+﻿:root {
+    --blue-electro: #0652DD;
+    --element-background: #050d24c7;
+    --yellow-contrast: #f9ca24;
+    --filter-font-size: 1.88vw;
+    --pink-contrast: #D417E6;
+}
+
+.navbar {
+    background-color: #050D24 !important;
+    position: relative !important;
+}
+
+#topFooter {
+    background-color: #050D24 !important;
+}
+
+#DashboardContainerHeader {
+    background-color: #050d2491;
+}
+
+body {
+    scrollbar-width: thin;          
+    scrollbar-color: #071336 rgba(12, 32, 90, 0.95); 
+}
+
+body::-webkit-scrollbar {
+    width: 10px;               
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(12, 32, 90, 0.95);    
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #071336;    
+    border-radius: 20px;       
+    border: 3px solid rgba(12, 32, 90, 0.95); 
+}
+
+#RepositoryHeader {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 3.75vw;
+    color: white;
+    margin-top: 4vh;
+    margin-bottom: 6vh;
+}
+
+#Favourites {
+    background-color: var(--blue-electro);
+    padding-bottom: 1.25vh;
+}
+
+#MainSearchCollections {
+    margin-top: 10vh;
+}
+
+#Favourites-Text {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    text-align: left;
+    font-size: 3.05vw;
+    color: white;
+    margin-top: 2.25vh;
+    margin-bottom: 3vh;
+    padding-left: 0.25vw;
+}
+
+.empty-favorite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 2vw 3vh 2vw;
+}
+
+.empty-favorite button {
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 2.4vw;
+    color: var(--yellow-contrast);
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: 0vh;
+    transition: all 0.45s ease-in-out;
+}
+
+.empty-favorite img {
+    width: 200px;
+    margin-bottom: 3vh;
+}
+
+.empty-favorite h6 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 2.4vw;
+    color: white;
+}
+
+.favourite-column {
+    margin-bottom: 4.5vh;
+}
+
+.favorite-element {
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid white;
+    background-color: white;
+    text-align: center;
+    color: var(--blue-electro);
+    padding: 1em;
+    transition: all 0.45s ease;
+    cursor: pointer;
+}
+
+.favorite-element .delete-favourite {
+    position: absolute;
+    top: 0.9vh;
+    right: 0.7vw;
+    color: var(--element-background);
+    font-size: 1.55vw;
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+.favorite-element .favorite-title {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.5vw;
+    color: inherit;
+    margin-bottom: 0.1vh;
+}
+
+.favorite-element .favorite-icon {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 5vw;
+    color: inherit;
+}
+
+.favorite-element .favorite-additional-info {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.1vw;
+    color: inherit;
+    margin-top: 2.5vh;
+}
+
+.search-input {
+    font-size: var(--filter-font-size) !important;
+    background-color: var(--element-background);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--element-background);
+}
+
+.search-input:focus {
+    background-color: var(--element-background);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--element-background);
+}
+
+.FindCollectionButton {
+    font-size: var(--filter-font-size) !important;
+    color: white !important;
+    background-color: var(--element-background);   
+    border: none;
+}
+
+#RepositorySelect {
+    font-size: var(--filter-font-size) !important;
+}
+
+#SetsOutput {
+    margin-top: 5vh;
+}
+
+.badge-repository {
+    font-size: var(--filter-font-size) !important;
+    font-family: 'Quicksand', sans-serif;
+    background-color: transparent;
+    font-weight: 600;
+    color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-right: 1.7vw;
+    padding-left: 1.7vw;
+    border-bottom: 3px solid transparent;
+    border-radius: 0px;
+    transition: all 0.25s ease;
+}
+
+.badge-repository:hover {
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.badge-repository:focus {
+    box-shadow: none;
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.badge-repository i {
+    position: relative;
+    top: -0.3vh;
+}
+
+.repository-set-body {
+    padding: 2.5vh 2vw;
+    background-color: var(--element-background);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    cursor: pointer;
+    border: 2.9px solid transparent;
+    transition: all 0.415s ease;
+}
+
+.repository-set-body-icon svg {
+    width: 3.4vw;
+    color: inherit;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.active-star {
+    color: var(--yellow-contrast) !important;
+}
+
+.repository-set-body-icon {
+    width: 15%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.repository-set-body-data {
+    width: 69%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.repository-set-body-data h5 {
+    font-size: 2vw;
+    color: inherit;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0px;
+    padding: 0.5vh 0;
+}
+
+.repository-set-body-data h6 {
+    font-size: 1.5vw;
+    color: inherit;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0px;
+    padding: 0.5vh 0;
+}
+
+.repository-set-options {
+    width: 16%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.repository-set-options svg {
+    width: 2vw;
+    color: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.45s ease;
+    cursor: pointer;
+}
+
+.collection-set {
+    margin-bottom: 3vh;
+}
+
+.text-set {
+    margin-bottom: 3vh;
+}
+
+@media (hover) {
+    .repository-set-options .bi-star-fill:hover {
+        color: var(--yellow-contrast);
+        transform: scale(1.4);
+    }
+
+    .repository-set-options .bi-trash-fill:hover {
+        color: var(--pink-contrast);
+        transform: scale(1.4);
+    }
+
+    .empty-favorite button:hover {
+        transform: scale(1.14);
+    }
+
+    .delete-favourite:hover {
+        color: red;
+    }
+
+    .favorite-element:hover {
+        transform: scale(1.065);
+    }
+
+    .repository-set-body:hover {
+        border-color:white;
+        transform: scale(1.025);
+    }
+}

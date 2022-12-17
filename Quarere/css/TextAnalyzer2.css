@@ -1,0 +1,45 @@
+﻿.hand_icon {
+    padding-left: 30px !important;
+}
+.responsive-textbox
+{
+    width: 90%;
+    margin-top: 20px;
+}
+.button_analyzer {
+    text-decoration: none;
+    background-color: #004aad;
+    border: 2px solid #004aad;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 12px 40px;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 0px 30px 7px rgb(255,255,255,.15), 0px 0px 10px 5px rgb(255,255,255,.12), 0px 0px 4px 5px rgb(255,255,255,.1);
+    margin-right: 10%;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+    .button_analyzer:hover {
+        background-color: white;
+        color: #48dbfb;
+        border: 2px solid #48dbfb;
+    }
+
+#TextBoxDesc {
+    text-align: left !important;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 20px;
+    font-size: 2.1rem;
+}
+
+.icon_analyzer
+{
+    width: 50px;
+}

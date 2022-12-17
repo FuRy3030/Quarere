@@ -1,0 +1,252 @@
+﻿#HeaderMaster .fixed-top {
+    z-index: 8 !important;
+}
+
+.EmptyDiv {
+    height: 83.34px;
+}
+
+#logo {
+    width: 10vw;
+}
+
+@media only screen and (max-width: 991px) {
+    #logo {
+        width: 135px;
+    }
+}
+
+#logo:focus {
+    animation: bump 0.5s ease-in-out;
+}
+
+#logo:active {
+    animation: none;
+}
+
+@keyframes bump {
+    0% {
+        transform: scale(1);
+    }
+    33% {
+        transform: scale(0.85);
+    }
+    66% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.login-button-navbar {
+    position: absolute;
+    right: 2.5vw;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.4vw;
+    background-color: #0652DD;
+    border: 2px solid #0652DD;
+    color: white;
+    border-radius: 1vw;
+    padding: 3px 2vw 3px 2vw;
+    transition: all 0.5s ease-in-out;
+}
+
+    .login-button-navbar:hover {
+        background-color: white;
+        color: #0652DD;
+        border: 2px solid #0652DD;
+    }
+
+    .login-button-navbar i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        position: relative;
+        right: 2.35vw;
+        transition: all 0.5s ease-in-out 0s;
+        color: white;
+    }
+
+    .login-button-navbar:hover i {
+        opacity: 1;
+        right: 0vw;
+        color: #0652DD;
+    }
+
+    .login-button-navbar span {
+        position: relative;
+        right: 0.5vw;
+        color: white;
+        transition: all 0.5s ease-in-out 0s;
+    }
+
+    .login-button-navbar:hover span {
+        position: relative;
+        right: 0vw;
+        color: #0652DD;
+    }
+
+#SignUpButtonNavbar {
+    background-color: white;
+    border: 2px solid white;
+    color: #0652DD;
+    position: absolute;
+    right: 14vw;
+}
+
+#SignUpButtonNavbar:hover {
+    background-color: #0652DD;
+    border: 2px solid white;
+    color: white;
+}
+
+#SignUpButtonNavbar span {
+    color: #0652DD;
+}
+
+#SignUpButtonNavbar:hover span {
+    color: white;
+}
+
+#SignUpButtonNavbar i {
+    color: #0652DD;
+}
+
+#SignUpButtonNavbar:hover i {
+    color: white;
+}
+
+#SideBar {
+    min-width: 280px;
+    max-width: 280px;
+    background-color: white;
+    height: 1000px;
+    box-shadow: 0px 0px 1px 0px rgba(66, 68, 90, 1);
+    left: 0px !important;
+    top: 76.4px !important;
+    position: fixed;
+    z-index: 8;
+    width: 15%;
+    transform: scale(1, 0);
+    transition: all 0.15s ease-in-out;
+    transform-origin: top center;
+}
+
+    #SideBar.active {
+        transform: scale(1, 1);
+    }
+
+.navbarTopHeading {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    color: white;
+    background-color: #180279 !important;
+}
+
+    .navbarTopHeading img {
+        width: 60px;
+        height: 60px;
+        object-fit: fill;
+        border-radius: 7.5px;
+        margin-right: 12px;
+    }
+
+.navbarBottomHeading {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.9rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #341f97;
+    color: white;
+}
+
+#SideBar a {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(45deg, #004aad, #7b20c5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#SideBar .icon {
+    margin-right: 12px;
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+#SideBar .list-button-sidebar {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    transition: all 0.49s ease-in-out;
+    border: none;
+    width: 100%;
+}
+
+    #SideBar .list-button-sidebar:hover {
+        background-color: #2561d1;
+    }
+
+        #SideBar li:hover a {
+            background: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+.odd.list-button-sidebar {
+    background-color: ghostwhite;
+}
+
+.noneodd.list-button-sidebar {
+    background-color: white;
+}
+
+.btn-sidebar {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 20px;
+    border: none;
+    background-color: #341f97;
+    color: white;
+    transition: all 0.49s ease-in-out;
+}
+
+    .btn-sidebar span {
+        display: inline-block;
+        opacity: 1;
+        margin-left: 18px;
+    }
+
+    .btn-sidebar:hover span {
+        
+    }
+    
+.btn-sidebar:hover {
+    background-color: white;
+    color: #341f97;
+}
+
+.grey-box {
+    background-color: ghostwhite;
+    height: 15px;
+}
+
+

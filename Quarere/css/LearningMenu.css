@@ -1,0 +1,411 @@
+﻿:root {
+    --blue-electro: #0652DD;
+    --element-background: #050d24c7;
+    --yellow-contrast: #f9ca24;
+    --filter-font-size: 1.88vw;
+    --pink-contrast: #D417E6;
+    --level-one: translateZ(2.25rem);
+    --level-two: translateZ(4.5rem);
+    --level-three: translateZ(6.75rem);
+    --colection-tile-height: 30.75vh;
+}
+
+.navbar {
+    background-color: #050D24 !important;
+    position: relative !important;
+}
+
+#topFooter {
+    background-color: #050D24 !important;
+}
+
+#DashboardContainerHeader {
+    background-color: #050d2491;
+}
+
+body {
+    scrollbar-width: thin;          
+    scrollbar-color: #071336 rgba(12, 32, 90, 0.95); 
+}
+
+body::-webkit-scrollbar {
+    width: 10px;               
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(12, 32, 90, 0.95);    
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #071336;    
+    border-radius: 20px;       
+    border: 3px solid rgba(12, 32, 90, 0.95); 
+}
+
+#LearningModeSelector {
+    width: 100%;
+    background-color: var(--element-background);
+    padding: 15px;
+    border-radius: 9px;
+    min-height: 75vh;
+}
+
+#LearningModeSelectorHeading {
+    margin-top: 2vh;
+    margin-bottom: 4.6vh;
+    font-size: 3vw;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 0.4vw;
+    color: white;
+    text-align: center;
+}
+
+.learning-mode-menu-element {
+    margin: 5vh 0;
+    padding: 0.75vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 1.65vw;
+    background-color: white;
+    color: var(--yellow-contrast);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.learning-mode-menu-element-selected {
+    background-color: var(--blue-electro);
+    color: white;
+}
+
+.learning-mode-menu-element i {
+    color: inherit;
+    font-size: 1.85vw;
+    padding: 0 1vw;
+    position: relative;
+    top: -0.25vh;
+}
+
+.learning-mode-menu-element span {
+    flex: 2;
+    text-align: center;
+    color: inherit;
+    font-size: 1.85vw;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.flex-header {
+    display: flex;
+    margin-bottom: 4.75vh;
+}
+
+.FindCollectionButton {
+    font-size: 1.6vw;
+    color: white !important;
+    background-color: var(--element-background);   
+    border: none;
+}
+
+.search-input {
+    font-size: 1.6vw;
+    background-color: var(--element-background);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--element-background);
+}
+
+.search-input:focus {
+    background-color: var(--element-background);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--element-background);
+}
+
+#LearningSelect {
+    font-size: 1.6vw;
+}
+
+.collection-tile-column {
+    padding: 0 2vw;
+}
+
+.collection-tile {
+    width: 100%;
+    min-height: var(--colection-tile-height);
+    max-height: var(--colection-tile-height);
+    perspective: 1000px;
+    margin-bottom: 4.5vh;
+}
+  
+.collection-tile__content {
+    text-align: center;
+    position: relative;
+    padding: 4.5vh 0;
+    transition: transform 1.5s;
+    background: transparent;
+    transform-style: preserve-3d;
+    min-height: var(--colection-tile-height);
+    max-height: var(--colection-tile-height);
+}
+
+.collection-tile:hover .collection-tile__content {
+    transform: rotateY(.5turn);
+}
+
+.collection-tile__front,
+.collection-tile__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    align-content: center;
+    min-height: var(--colection-tile-height);
+    max-height: var(--colection-tile-height);
+    border-radius: 12px;
+}
+
+.collection-tile__front {
+    background-color: white;
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collection-tile__front::before {
+    content: '';
+    position: absolute;
+    --spacer: 1em;
+    top: var(--spacer);
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    border: 3px solid var(--blue-electro);
+    transform: var(--level-one);
+}
+
+.collection-tile__title {
+    font-size: 2vw;
+    transform: var(--level-three);
+    text-transform: uppercase;
+    padding: 1em;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    margin: 0px !important;
+    color: var(--blue-electro);
+    cursor: default;
+}
+
+.collection-tile__back {
+    transform: rotateY(.5turn);
+    color: #333;
+    background: white;
+    padding: 15px;
+}
+
+.checkboxes {
+    display: none;
+}
+
+.collection-tile-checkbox {
+    min-height: 0.2vh !important;
+    transform: var(--level-one);
+}
+
+.collection-tile-checkbox input {
+    width: 1.3vw;
+    height: 1.3vw;
+}
+
+.collection-tile-checkbox label {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.11vw;
+}
+
+.collection-buttons {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-around;
+    height: 100%;
+    transform: var(--level-two);
+}
+
+.button-configure {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.7vw;
+    margin: 0;
+    color: var(--blue-electro);
+    cursor: pointer;
+}
+
+.button-configure::after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    bottom: -0.75vh;
+    left: 0;
+    height: 3.2px;
+    background: var(--blue-electro);
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.button-select {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.7vw;
+    margin: 0;
+    color: var(--blue-electro);
+    cursor: pointer;
+}
+
+.button-select::after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    bottom: -0.75vh;
+    left: 0;
+    height: 3.2px;
+    background: var(--blue-electro);
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.flashcards-info {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    transform: var(--level-two);
+}
+
+.flashcards-info i {
+    margin: 0.3vh 0;
+    font-size: 1.65vw;
+    color: var(--blue-electro);
+    cursor: pointer;
+}
+
+.flashcards-info h6 {
+    text-align: center;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.1vw;
+    color: var(--yellow-contrast);
+}
+
+.flashcards-info button {
+    width: 80%;
+    padding: 0.15vw;
+    font-size: 1vw;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    background-color: var(--blue-electro);
+    color: white;
+    border-radius: 0.85vw;
+    outline: none;
+    border: none;
+    text-align: center;
+    align-self: center;
+}
+
+.flashcards-info button:focus {
+    outline: none;
+    border: none;
+}
+
+#RightSideLearningMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle .onoff {
+    color: var(--blue-electro);
+    font-size: 1.4vw;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1.5vh;
+}
+
+.slider {
+    position: relative;
+    cursor: pointer;
+    background-color: #333;
+    transition: all 0.55s ease;
+    width: 13.5vw;
+    height: 1.55vw;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 1.25vw;
+    width: 1.25vw;
+    background-color: #fff;
+    transition: all 0.55s ease;
+    top: 0.15vw;
+    left: 0.4vw;
+}
+
+input:checked + .slider {
+    background-color: var(--blue-electro);
+    box-shadow: 0 0 12px var(--blue-electro);
+}
+  
+input:checked + .slider:before {
+    transform: translateX(11.5vw);
+}
+
+.slider.round {
+    border-radius: 22.5px;
+  }
+
+.slider.round::before {
+    border-radius: 1vw;
+}
+
+@media (hover) {
+    .learning-mode-menu-element:hover {
+        background-color: var(--blue-electro);
+        color: white;
+    }
+
+    .button-configure:hover::after {
+        transform: scaleX(1);
+    }
+    
+    .button-select:hover::after {
+        transform: scaleX(1);
+    }
+}

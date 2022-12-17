@@ -1,0 +1,362 @@
+﻿.navbar {
+    background-color: #091B49 !important;
+    position: relative !important;
+}
+
+#topFooter {
+    background-color: #091B49 !important;
+}
+
+#DashboardContainerHeader {
+    background-color: #0B225B !important;
+}
+
+#importText {
+    margin-top: 50px;
+    padding: 12px;
+    box-shadow: 0px 0px 3px 0px rgba(68, 68, 68, 0.12);
+    border-radius: 7px;
+}
+
+    #importText .form-select {
+        width: auto;
+    }
+
+#importSelectGroup {
+    margin: 10px;
+    width: auto;
+}
+
+    #importSelectGroup label {
+        background-color: #004add;
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+    }
+
+        .label-input span {
+            margin-right: 12px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+        }
+
+    #importSelectGroup:focus .label-input {
+        border-right: 0px;
+        border-left: 2px solid;
+        border-top: 2px solid;
+        border-bottom: 2px solid;
+        border-color: #004aad;
+        font-family: "Font Awesome 5 Free";
+    }
+
+#importSelect {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-size: 50px 30px;
+    color: #1e90ff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+    #importSelect:focus {
+        border: 2px solid;
+        border-color: #004aad;
+        box-shadow: none;
+    }
+
+    .option {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 600;
+        font-size: 1.3rem
+    }
+
+.import-header {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 2.1rem;
+    margin: 10px 0px 10px 10px;
+    text-decoration: underline;
+    color: #23293b;
+}
+
+.import-comment {
+    font-weight: 600;
+    font-family: 'Arvo', serif;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+#topP {
+    margin-top: 12px !important;
+}
+
+.import-margin-row {
+    margin-top: 60px;
+}
+
+.import-borderless-input {
+    width: 100%;
+    background-color: #f6f7fb;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: #23293b;
+    margin-bottom: 10px;
+    border-radius: 0.2rem;
+    font-size: 1.45rem;
+    margin-top: 15px;
+    color: #23293b;
+}
+
+.import-borderless-label {
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    padding-top: 0.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+.import-borderless-input:focus {
+    background-color: #f6f7fb;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-image: linear-gradient(45deg, #004aad, #7b20c5) 1;
+    margin-bottom: 10px;
+    border-radius: 0.2rem;
+    box-shadow: none;
+    font-size: 1.45rem;
+}
+
+.width-100 {
+    display: block !important;
+}
+
+.import-textarea {
+    background-color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0px 0px 3px 0px rgba(87, 87, 90, 0.25);
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    color: #23293b;
+}
+
+    .import-textarea:focus {
+        box-shadow: 0px 0px 3px 0px rgba(87, 87, 90, 0.25);
+        border: 2px solid #3442ff;
+    }
+
+.label-import-textarea {
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    transform: scale(1) translateY(0) translateX(0);
+    opacity: 1;
+    transition: all 0.1s ease-in-out;
+    display: block;
+    color: #23293b;
+}
+
+#uploadTextButton {
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+}
+
+    #uploadTextButton:focus {
+        box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        transform: translateY(0px);
+        background-image: none;
+    }
+
+        #uploadTextButton:focus:hover {
+            box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+            transform: translateY(-2px);
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+            color: white !important;
+        }
+
+    #uploadTextButton span {
+        position: relative;
+        left: 20px;
+        transition: all 0.32s ease-in-out;
+        color: #36395A !important;
+    }
+
+    #uploadTextButton i {
+        position: relative;
+        margin-left: 12px;
+        left: -32px;
+        opacity: 0;
+        color: #36395A !important;
+        transition: all 0.32s ease-in-out;
+    }
+
+    #uploadTextButton:hover span {
+        left: 0px;
+        color: white !important;
+    }
+
+    #uploadTextButton:hover i {
+        left: 0px;
+        opacity: 1;
+        color: white !important;
+    }
+
+#DragDrop {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px rgba(87, 87, 90, 0.2);
+    border-radius: 35px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 55px;
+    display: none;
+}
+
+.drag-drop-header {
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.5rem;
+    padding-top: 38px;
+    margin-bottom: 6px;
+    color: #23293b;
+}
+
+.drag-drop-header-small {
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+.drag-area {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 550px;
+    border: 6px dashed rgba(30, 144, 255, 0.4);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(30, 144, 255, 0.05);
+}
+
+    .drag-area.active {
+        border: 6px dashed rgba(0, 74, 221, 0.85);
+        background-color: rgba(0, 74, 221, 0.1);
+    }
+
+.drag-drop-big {
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem;
+    color: #23293b;
+}
+
+.drag-drop-small {
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 35px;
+}
+
+.drag-area button {
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem;
+    border: none;
+    background-color: inherit;
+    color: #1B9CFC;
+    padding: 0px;
+}
+
+    .drag-area button i {
+        opacity: 1;
+    }
+
+    .drag-area button:hover {
+        animation: bump 0.5s ease-in-out;
+    }
+
+.drag-drop-small-icons img {
+    padding: 10px;
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+#dragBigIcon {
+    margin-bottom: 17px;
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+.uploaded-file {
+    margin: auto;
+    margin-top: 35px;
+    width: 90%;
+    display: none;
+}
+
+.no-select {
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+.uploaded-file-description {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+}
+
+    .uploaded-file-description h2 {
+        font-weight: 600;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 2rem;
+        color: #23293b;
+        margin-bottom: 0.6rem;
+    }
+
+    .uploaded-file-description i {
+        color: #004aad;
+    }
+
+    .uploaded-file-description .progress {
+        height: 20px;
+    }
+
+    .uploaded-file-description .progress-bar {
+        font-weight: 600;
+        font-family: 'Quicksand', sans-serif;
+        height: 20px;
+        font-size: 1rem;
+    }
+
+.error-message {
+    color: red;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    display: none;
+}
+
+#ErrorText {
+    position: relative;
+    top: -30px;
+}
+

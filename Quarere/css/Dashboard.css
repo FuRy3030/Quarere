@@ -1,0 +1,392 @@
+﻿:root {
+    --padding: 1.5em;
+    --darker-blue-neon: #0033FF;
+    --lighter-blue-neon: #099FFF;
+}
+
+body {
+    scrollbar-width: thin;          
+    scrollbar-color: #071336 rgba(12, 32, 90, 0.95); 
+}
+
+body::-webkit-scrollbar {
+    width: 10px;               
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(12, 32, 90, 0.95);    
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #071336;    
+    border-radius: 20px;       
+    border: 3px solid rgba(12, 32, 90, 0.95); 
+}
+
+.navbar {
+    background-color: #050D24 !important;
+    position: relative !important;
+}
+
+#topFooter {
+    background-color: #050D24 !important;
+}
+
+#DashboardContainer {
+    padding: 0px 30px 38px 30px;
+}
+
+#DashboardContainerMiddle {
+    padding: 0px 30px 0px 30px;
+    background-color: white;
+    margin-top: 0.4vh;
+}
+
+#DashboardContainerHeader {
+    padding: 0px 30px 0px 30px;
+    background-color: #050d2491;
+    position: fixed;
+    top: 83.34px;
+    left: 0;
+    transition: background-color 0.4s ease;
+    z-index: 7;
+}
+
+.dashboard-heading {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 3vw;
+    color: #0652DD;
+    margin-bottom: 0vh;
+    padding: 2vh 1.25vw;
+    display: block;
+}
+
+.dashboard-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2vh;
+}
+
+.dashboard-navbar {
+    display: inline-block;
+    margin-top: 0.5vh;
+}
+
+.dashboard-navbar-element {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.765vw;
+    padding-left: 1.055vw;
+    padding-right: 1.055vw;
+    padding-top: 1.4vh;
+    padding-bottom: 3vh;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.dashboard-navbar-element:hover {
+    transform: scale(1.065);
+}
+
+.dashboard-navbar-element span {
+    margin-left: 1vw;
+}
+
+.dashboard-navbar-element i {
+    position: relative;
+    bottom: 0.2vh;
+}
+
+.dashboard-navbar-element svg {
+    position: relative;
+    bottom: 0.25vh;
+}
+
+#cap {
+    height: auto;
+    width: 2.2vw;
+}
+
+.dashboard-section-heading {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 2.6vw;
+    margin-top: 10vh;
+    margin-bottom: 4vh;
+    color: white;
+    text-align: center;
+}
+
+#DashboardSectionHeadingFirst {
+    margin-top: 5.5vh;
+}
+
+.dashboard-navbar-element::after {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    width: 94%;
+    height: 0.6vh;
+    background: white;
+    content: "";
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.dashboard-navbar-element:hover::after {
+    opacity: 1;
+}
+
+#Texts {
+    margin-bottom: 2vh;
+}
+
+.dashboard-column {
+    padding: 0 2vw;
+}
+
+#FlashcardsSecond .dashboard-element-flashcards {
+    background-image: url("../../images/flashcards-dashboard2.jpg");
+}
+
+#FlashcardsThird .dashboard-element-flashcards {
+    background-image: url("../../images/flashcards-dashboard3.jpg");
+}
+
+#TextsSecond .dashboard-element-flashcards {
+    background-image: url("../../images/text-dashboard2.jpg");
+}
+
+#TextsThird .dashboard-element-flashcards {
+    background-image: url("../../images/text-dashboard3.jpg");
+}
+
+.dashboard-element-empty {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    min-height: 37.5vh;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.6s ease;
+    border: 2px solid #071436fa;
+    background-color: #050d24c7;
+}
+
+.dashboard-element-flashcards {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    background-image: url("../../images/flashcards-dashboard.jpg");
+    background-size: cover;
+    color: white;
+    min-height: 37.5vh;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.6s ease;
+    border: 2px solid #071436fa;
+}
+
+.dashboard-element-texts {
+    background-image: url("../../images/text-dashboard.jpg");
+} 
+
+.dashboard-element-texts .dashboard-element-title::after {
+    background: var(--lighter-blue-neon);
+}
+
+.dashboard-element-texts .dashboard-element-button {
+    background-color: var(--lighter-blue-neon);
+}
+
+.dashboard-element-texts .dashboard-element-button:hover {
+    background-color: var(--darker-blue-neon);
+}
+
+.dashboard-element-content {
+    width: 100%;
+    padding: 5vh 1.5em 1.5em;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    transform: translateY();
+}
+
+.dashboard-element-empty-content {
+    text-align: center;
+    width: 100%;
+    padding: 5vh 1.5em 1.5em;
+    height: 100%;
+    position: absolute !important;
+    top: 0px;
+}
+
+.dashboard-element-empty-content h2 {
+    padding-top: 1vh;
+    padding-bottom: 5vh;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.25vw;
+    color: white;
+}
+
+.add-dashboard-button {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2vw;
+    font-weight: 600;
+    background-color: #0652DD;
+    color: white;
+    padding: 1vh 3vw;
+    border-radius: 2vw;
+    border: 2px solid transparent;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.add-dashboard-button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 2vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+    background-color: #0652DD;
+}
+
+.add-collection-button {
+    background-color: white;
+    color: #0652DD;
+}
+
+.add-collection-button::after {
+    background-color: white;
+}
+
+.black-background-handler {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+@media (hover) {
+    .dashboard-element-content {
+        transform: translateY(calc(100% + var(--padding)));
+        opacity: 0;
+        transition: all 0.6s ease;
+    }
+    
+    .dashboard-element-flashcards:hover .dashboard-element-content {
+        transform: translateY(0%);
+        opacity: 1;
+        transition-delay: 250ms;
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .dashboard-element-empty:hover {
+        transform: scale(1.065);
+        border: 2px solid white;
+    }
+
+    .dashboard-element-flashcards:hover {
+        transform: scale(1.065);
+        border: 2px solid white;
+    }
+    
+    .dashboard-element-flashcards:hover .dashboard-element-title::after{
+        transform: scaleX(1);
+    }
+
+    .add-dashboard-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(7, 20, 54, 1);
+        border: 2px solid white;
+    }
+
+    .add-dashboard-button:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+
+    .add-collection-button:hover {
+        border: 2px solid #0652DD;
+    }
+}
+
+.dashboard-element-short-content {
+    position: absolute;
+    top: calc(var(--padding) * 1);
+    left: calc(var(--padding) * 1);
+    color: white;
+}
+
+.dashboard-element-title {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 2vw;
+    margin-bottom: 0px;
+    width: fit-content;
+    position: relative;
+}
+
+.dashboard-element-title::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + var(--padding));
+    bottom: -0.75vh;
+    left: calc(var(--padding) * -1);
+    height: 3px;
+    background: var(--darker-blue-neon);
+    transition: transform 0.6s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.dashboard-element-body {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 0.94vw;
+    margin: 0px;
+    padding-bottom: 1.6vh;
+    text-align: justify;
+}
+
+.dashboard-element-additional-info {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 1.35vw;
+    padding: 1.2vh 0vh;
+    margin: 0px;
+    color: white;
+}
+
+.dashboard-element-button {
+    padding: 0.5vh 1.5vw;
+    color: white;
+    background-color: var(--darker-blue-neon);
+    border-radius: 10px;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 1.4vw;
+}
+
+.dashboard-element-button:hover {
+    color: white;
+    background-color: var(--lighter-blue-neon);
+}

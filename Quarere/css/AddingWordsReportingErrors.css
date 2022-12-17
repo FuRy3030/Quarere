@@ -1,0 +1,159 @@
+﻿.wordgroup {
+    width: 730px !important;
+    margin-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+@media only screen and (max-width: 991px)
+{
+    .wordgroup {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 20px;
+    }
+}
+.hrAdding
+{
+    background-color: grey;
+    border: 2px solid grey;
+}
+#AddingWords h5 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.WordTextBox {
+    width: 90%;
+}
+.DropdownWord {
+    width: 80%;
+}
+.addingrow
+{
+    margin-bottom: 13px;
+}
+.AddingButton {
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border-radius: 10px;
+    border: solid;
+    border-image: 1px linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inherit;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 16px 20px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    transition: all .5s cubic-bezier(.22, .61, .36, 1);
+    width: 100%;
+}
+
+    .AddingButton:hover {
+        color: white;
+        border-image: 1px linear-gradient(144deg,#FFFFFF, #FFFFFF 50%,#FFFFFF);
+        font-size: 1.65rem;
+        transform: translateY(-4px);
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), 6px 6px 29px 0px rgba(0, 221, 235, 0.5), -6px -6px 29px 0px rgba(175, 64, 255, 0.5), 0px 0px 29px 0px rgba(91, 66, 243, 0.5);
+    }
+
+.ErrorsButton {
+    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    border-radius: 10px;
+    border: solid;
+    border-image: 1px linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inherit;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 16px 20px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    transition: all .5s cubic-bezier(.22, .61, .36, 1);
+    width: 100%;
+}
+
+    .ErrorsButton:hover {
+        color: white;
+        border-image: 1px linear-gradient(144deg,#FFFFFF, #FFFFFF 50%,#FFFFFF);
+        font-size: 1.65rem;
+        transform: translateY(-4px);
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), 6px 6px 29px 0px rgba(255, 154, 90, 0.5), -6px -6px 29px 0px rgba(239, 71, 101, 0.5);
+    }
+
+.buttonrow
+{
+    margin-top: 32px;
+}
+
+.button_icon
+{
+    margin-left: 10px;
+}
+
+#ReportingErrors h5 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.error_img {
+    width: 1000px !important;
+    margin-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media only screen and (max-width: 991px) {
+    .error_img {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 20px;
+    }
+}
+
+.error_col
+{
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 767px)
+{
+    #BottomTextBox-Errors {
+        margin-bottom: 15px;
+    }
+}
+
+#AddingWords 
+{
+    background-image: url("../../background/whitebackground.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: static;
+    background-size: cover;
+}
+
+#ReportingErrors {
+    background-image: url("../../background/beton.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: static;
+    background-size: cover;
+}

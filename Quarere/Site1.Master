@@ -1,0 +1,472 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Quarere.Site1" %>
+<%@ Register Assembly="BotDetect" Namespace="BotDetect.Web.UI" TagPrefix="BotDetect" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="bootstrap/js/popper.min.js" defer></script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styleAnalyzer.css" rel="stylesheet">
+    <link href="css/AddingWordsReportingErrors.css" rel="stylesheet">
+    <link href="css/MasterPageStyles.css" rel="stylesheet">
+    <link href="css/Login.css" rel="stylesheet">
+    <link href="css/ReadText.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <link href="jQuery/jquery-ui.css" rel="stylesheet" />
+
+    <!-- jQuery Tables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.3/af-2.3.7/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/b-print-2.0.1/cr-1.5.5/date-1.1.1/fc-4.0.1/fh-3.2.0/kt-2.6.4/r-2.2.9/rg-1.1.4/rr-1.2.8/sc-2.0.5/sb-1.3.0/sp-1.4.0/sl-1.3.3/datatables.min.css"/>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+    <asp:HiddenField runat="server" ID="Username" />
+    <asp:HiddenField runat="server" ID="SessionID" />
+    <div runat="server" id="RegisterBackdrop" class="backdrop register-backrop"></div>
+    <div runat="server" id="RegisterSuccess" class="card Register-Success" style="width: 700px;">
+        <img src="icons/close.png" class="close-modal-login close-register-success" />
+        <div class="created-account-modal">
+            <div class="modal-login-icon-success">
+                <i class="fa-7x far fa-check-circle"></i>
+            </div>
+            <div class="modal-login-success-content">
+                <h2>Signing Up Successful!</h2>
+                <h4>Your account has been created successfully.</h4>
+                <h6>Please now log in and start exploring portal's content.</h6>                  
+            </div>
+            <div class="modal-login-success-button">
+                <button id="RegisterSuccessButton">
+                    <span>Login</span><div></div><i class="fas fa-user-graduate"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div runat="server" id="LoginBackdrop" class="backdrop login-backdrop"></div>
+    <div runat="server" id="LoginSuccess" class="card Login-Success" style="width: 700px;">
+        <img src="icons/close.png" class="close-modal-login close-login-success" />
+        <div class="created-account-modal">
+            <div class="modal-login-icon-success">
+                <i class="fa-7x far fa-check-circle"></i>
+            </div>
+            <div class="modal-login-success-content">
+                <h2>Successful Login!</h2>
+                <h4 runat="server" id="WelcomeTextModal">Welcome Back!</h4>
+                <h6>Get back to your work</h6>                  
+            </div>
+            <div class="modal-login-success-button">
+                <button id="LoginSuccessButton">
+                    <span>Dashboard</span><div></div><i class="fas fa-bars dashboard-redirect"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="topContent">
+    <div runat="server" id="modalLogin" class="modal-login">
+        <i class="fa-3x fas fa-times close-modal-login-and-register"></i>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">               
+                    <div runat="server" id="register" class="card register" style="width: 40rem;">
+                        <div class="card-body">
+                            <h1 class="authenticate-header">Create Account</h1>
+                            <div>
+                                <input placeholder="Username"
+                                    runat="server"
+                                    ID="RegisterUsername"
+                                    name="username" 
+                                    type="text" 
+                                    class="register-input"/>
+                                <label class="register-label">USERNAME</label>
+                            </div>
+                            <br />
+                            <div>
+                                <input placeholder="person@quarere.com" 
+                                    runat="server"
+                                    ID="RegisterEmail"
+                                    name="email" 
+                                    type="text" 
+                                    class="register-input"/>
+                                <label class="register-label">E-MAIL</label>
+                            </div>
+                            <br />
+                            <div>
+                                <input placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" 
+                                    runat="server"
+                                    ID="RegisterPassword"
+                                    name="password" 
+                                    type="password" 
+                                    class="register-input"/>
+                                <label class="register-label">PASSWORD</label>
+                            </div>
+                            <br />
+                            <div>
+                                <input placeholder="Rewrite following sequence" 
+                                    runat="server"
+                                    ID="CaptchaRegisterInput"
+                                    name="captcha" 
+                                    type="text" 
+                                    class="register-input"/>
+                                <label class="register-label">CAPTCHA</label>
+                            </div>
+                            <br />
+                            <BotDetect:WebFormsCaptcha runat="server" ID="ExampleCaptcha"
+                                UserInputID="CaptchaRegisterInput" />
+                            <%--<BotDetect:WebFormsCaptcha ID="CaptchaRegister" runat="server" />
+                            <BotDetect:CaptchaValidator ID="CaptchaRegisterBox" runat="server" ControlToValidate="CaptchaRegisterInput" 
+                                CaptchaControl="CaptchaRegister" ErrorMessage="Retype the characters exactly as they appear in the picture"
+                                EnableClientScript="true" SetFocusOnError="true">
+                            </BotDetect:CaptchaValidator>--%>
+                            <div runat="server" id="alertRegister" class="alert alert-danger alert-register" role="alert">
+                              
+                            </div>
+                            <button class="page-login-button" runat="server" id="SignUpButton" onserverclick="SignUpButton_ServerClick">
+                                <span>Sign Up</span>
+                            </button>
+                            <div class="alternative">
+                                <p>Or Log In Using</p>
+                                <span class="center"><button><span>Login</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div runat="server" id="login" class="card login" style="width: 40rem;">
+                        <div class="card-body">
+                            <h1 class="authenticate-header">Login</h1>
+                            <div>
+                                <input placeholder="Username"
+                                    runat="server"
+                                    ID="LoginUsername"
+                                    name="username" 
+                                    type="text" 
+                                    class="register-input"/>
+                                <label class="register-label">USERNAME</label>
+                            </div>
+                            <br />
+                            <div>
+                                <input placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;"
+                                    runat="server"
+                                    ID="LoginPassword"
+                                    name="password" 
+                                    type="password" 
+                                    class="register-input"/>
+                                <label class="register-label">PASSWORD</label>
+                            </div>
+                            <div class="password-div">
+                                <button 
+                                    id="PasswordForgot"  
+                                    class="password-forgot">
+                                    Forgot Password?
+                                </button>
+                            </div>
+                            <div runat="server" id="alertLogin" class="alert alert-danger alert-register" role="alert">
+                              
+                            </div>
+                            <button class="page-login-button" runat="server" id="LogInButton" onserverclick="LogInButton_ServerClick">
+                                <span>Login</span>
+                            </button>
+                            <div class="alternative">
+                                <p>Or Sign Up Using</p>
+                                <span class="center">
+                                    <button><span>Sign Up</span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div runat="server" id="PasswordReset" class="card password-reset" style="width: 40rem;">
+                        <div class="card-body">
+                            <h1 class="authenticate-header">Password Reset</h1>
+                            <div>
+                                <input placeholder="Email or username"
+                                    runat="server"
+                                    ID="PasswordResetEmail"
+                                    name="email" 
+                                    type="text" 
+                                    class="register-input"/>
+                                <label class="register-label">EMAIL OR USERNAME</label>
+                            </div>
+                            <div runat="server" id="alertPasswordReset" class="alert alert-danger alert-register alert-register-reset-fail" role="alert">
+                              
+                            </div>
+                            <div runat="server" id="successPasswordReset" class="alert alert-success alert-password-reset-success" role="alert">
+                              
+                            </div>
+                            <button class="page-login-button" runat="server" id="ResetPasswordButton" onserverclick="ResetPasswordButton_ServerClick">
+                                <span>Reset Password</span>
+                            </button>
+                            <div class="alternative">
+                                <p>Or Return To Login Page Using</p>
+                                <span class="center">
+                                    <button><span>Login</span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div runat="server" id="NewPasswordSet" class="card new-password" style="width: 40rem;">
+                        <div class="card-body">
+                            <h1 class="authenticate-header">New Password</h1>
+                            <div>
+                                <input placeholder="Sent via email"
+                                    runat="server"
+                                    ID="PasswordResetCode"
+                                    name="password-reset-code" 
+                                    type="text" 
+                                    class="register-input"/>
+                                <label class="register-label">PASSWORD RESET CODE</label>
+                            </div>
+                            <br />
+                            <div>
+                                <input placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;"
+                                    runat="server"
+                                    ID="NewPassword"
+                                    name="new-password" 
+                                    type="password" 
+                                    class="register-input"/>
+                                <label class="register-label">NEW PASSWORD</label>
+                            </div>
+                            <br />
+                            <div>
+                                <input placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;"
+                                    runat="server"
+                                    ID="RepeatNewPassword"
+                                    name="repeat-new-password" 
+                                    type="password" 
+                                    class="register-input"/>
+                                <label class="register-label">REPEAT NEW PASSWORD</label>
+                            </div>
+                            <div runat="server" id="alertPasswordSet" class="alert alert-danger alert-register alert-register-reset-fail" role="alert">
+                              
+                            </div>
+                            <div runat="server" id="successPasswordSet" class="alert alert-success alert-password-reset-success" role="alert">
+                              
+                            </div>
+                            <button class="page-login-button" runat="server" id="SetNewPasswordButton" onserverclick="SetNewPasswordButton_ServerClick">
+                                <span>Set New Password</span>
+                            </button>
+                            <div class="alternative">
+                                <p>Or Return To Login Page Using</p>
+                                <span class="center">
+                                    <button><span>Login</span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <header id="HeaderMaster">
+        <div id="bottomHeader">
+            <div class="container-fluid">
+                <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+                  <a href="Homepage.aspx" class="navbar-brand">
+                    <img id="logo" tabindex="0" src="Logo/Quarere.png" alt="">
+                  </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav d-none d-lg-flex align-items-center">
+                        <li class="nav-item li_class">
+                          <a class="nav-link navbar_element" aria-current="page" href="Homepage.aspx">Home</a>
+                        </li>
+                        <li class="nav-item li_class">
+                          <a class="nav-link navbar_element" aria-current="page" href="Dashboard.aspx">Dashboard</a>
+                        </li> 
+                        <li class="nav-item li_class">
+                          <a class="nav-link navbar_element" href="AboutUs.aspx">About Us</a>
+                        </li>                       
+                        <li class="nav-item li_class">
+                          <a class="nav-link navbar_element" href="ContactUs.aspx">Contact Us</a>
+                        </li>
+                        <li class="nav-item dropdown li_class">
+                          <a class="nav-link dropdown-toggle" href="#" id="dropdownNavbar" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                          </a>
+                          <div class="dropdown-menu custom_menu" aria-labelledby="dropdownNavbar" style="z-index: 100;">
+                              <a class="dropdown-item" href="AddingWords.aspx"><i class="fas fa-lightbulb icon_dropdown"></i>Adding Words</a>
+                              <a class="dropdown-item" href="ReportingErrors.aspx"><i class="fas fa-bug icon_dropdown"></i>Reporting Errors</a>
+                          </div>
+                        </li>
+                        <button class="login-button-navbar" id="SignUpButtonNavbar" runat="server" onserverclick="SignUpButtonNavbar_ServerClick">
+                            <i class="fas fa-angle-right"></i> <span>Sign Up</span>
+                        </button>
+                        <button class="login-button-navbar" id="LoginButtonNavbar" runat="server" onserverclick="loginButtonNavbar_ServerClick">
+                            <i class="fas fa-angle-right"></i> <span>Login</span>
+                        </button> 
+                        <button class="login-button-navbar" id="LogoutButtonNavbar" runat="server" onserverclick="logoutButtonNavbar_ServerClick">
+                            <i class="fas fa-angle-right"></i> <span>Logout</span>
+                        </button>
+                      </ul>
+                      <ul class="navbar-nav d-block d-lg-none">
+                        <li class="nav-item li_class_small_res">
+                          <a class="nav-link navbar_element static-size-navbar-element" aria-current="page" href="Homepage.aspx">Home</a>
+                        </li>
+                        <li class="nav-item li_class_small_res">
+                          <a class="nav-link navbar_element static-size-navbar-element" aria-current="page" href="Dashboard.aspx">Dashboard</a>
+                        </li>
+                       <li class="nav-item li_class_small_res">
+                          <a class="nav-link navbar_element static-size-navbar-element" href="AboutUs.aspx">About Us</a>
+                        </li>                       
+                        <li class="nav-item li_class_small_res">
+                          <a class="nav-link navbar_element static-size-navbar-element" href="ContactUs.aspx">Contact Us</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    </header>
+   </div>
+
+        <!-- Main Content Placeholder -->
+        <div class="EmptyDiv"></div>
+        <div>
+            <%--<div id="SideBar">
+            <div class="navbarTopHeading"><button class="btn-sidebar"><i class="fas fa-arrow-up"></i><span>Close</span></button></div>
+            <div class="navbarBottomHeading">Discover</div>
+            <div class="grey-box"></div>
+            <ul class="sideBarContent list-unstyled components">
+                <li>
+                    <button runat="server" 
+                        id="SidebarButton1" 
+                        onserverclick="SidebarButton1_ServerClick" 
+                        class="list-button-sidebar noneodd">
+                        <img src="icons/menu.png" class="icon"/><a>Dashboard</a>
+                    </button>
+                </li>
+                <li class="odd">
+                    <button runat="server" 
+                        id="SidebarButton2" 
+                        onserverclick="SidebarButton1_ServerClick"
+                        class="list-button-sidebar odd">
+                        <img src="icons/book.png" class="icon"/><a>Add & Read</a>
+                    </button>
+                </li>
+                <li>
+                    <button runat="server" 
+                        id="SidebarButton3" 
+                        onserverclick="SidebarButton1_ServerClick"
+                        class="list-button-sidebar noneodd">
+                        <img src="icons/magnifying-glass.png" class="icon"/><a>Analyze Text</a>
+                    </button>
+                </li>
+                <li class="odd">
+                    <button runat="server" 
+                        id="SidebarButton4" 
+                        onserverclick="SidebarButton1_ServerClick"
+                        class="list-button-sidebar odd">
+                        <img src="icons/learn.png" class="icon"/><a>Learn</a>
+                    </button>
+                </li>
+                <li>
+                    <button runat="server" 
+                        id="SidebarButton5" 
+                        onserverclick="SidebarButton1_ServerClick"
+                        class="list-button-sidebar noneodd">
+                        <img src="icons/resources.png" class="icon"/><a>Create Sets</a>
+                    </button>
+                </li>
+                <li class="odd">
+                    <button runat="server" 
+                        id="SidebarButton6" 
+                        onserverclick="SidebarButton1_ServerClick"
+                        class="list-button-sidebar odd">
+                        <img src="icons/material.png" class="icon"/><a>Materials</a>
+                    </button>
+                </li>
+            </ul>
+            </div>--%>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+     <footer class="full-footer">
+      <div id="topFooter">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4" id="contact_footer">
+              <h2>Contact Us</h2>
+                <p style="color: grey;">For students</p>
+                <p style="color: white;"><i class="fas fa-envelope"></i> students@gmail.com</p>
+                <p style="color: grey;">For companies</p>
+                <p style="color: white;"><i class="fas fa-envelope"></i> companies@gmail.com</p>
+                <p style="color: white;"><img src="icons/telephone (1).png" width = "17px" alt=""> +48 509 770 284</p>
+            </div>
+            <div class="col-md-3" id="discovery_footer">
+              <h2>Discover</h2>
+              <a href="Dashboard.aspx">Dashboard</a><br>
+              <a href="Repository.aspx">Repository</a><br>
+              <a href="AddText.aspx">Upload Text</a><br>
+              <a href="LearningMenu.aspx">Learning Modes</a><br>
+              <a href="TextAnalyzer.aspx">Text Analyzer</a><br>
+            </div>
+            <div class="col-md-5 d-md-flex" id="social_footer">
+                <div class="col-md-6">
+                  <h2>More</h2>
+                  <a href="Homepage.aspx">Home</a><br>
+                  <a href="AboutUs.aspx">About Us</a><br>
+                  <a href="ContactUs.aspx">Contact Us</a><br>
+                  <a href="ReportingErrors.aspx">Report Errors</a><br>
+                  <a href="AddingWords.aspx">Add Words</a><br>
+                </div>
+                <div class="col-md-6">
+                  <h2>Find Us</h2>
+                  <a href="#" class="p-1"><img src="icons/facebook.png" width = "50px" height="50px" alt=""></a>
+                  <a href="#" class="p-1"><img src="icons/instagram.png" width = "50px" height="50px" alt=""></a><br />
+                  <img src="Logo/LogoTransparent.png" width="100px" style="padding: 50px 0px 0px 10px;"/>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+        <script type="text/javascript" src="JavaScript/LoginModal.js"></script>
+   </form>
+</body>
+    <script type="text/javascript" src="JavaScript/Sidebar.js"></script>
+</html>

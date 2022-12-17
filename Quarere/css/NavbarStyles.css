@@ -1,0 +1,74 @@
+﻿#DashboardContainerHeader {
+    padding: 0px 30px 0px 30px;
+    background-color: #0B225B;
+    position: fixed;
+    top: 83.34px;
+    left: 0;
+    transition: background-color 0.4s ease;
+    z-index: 7;
+}
+
+.dashboard-navbar {
+    display: inline-block;
+    margin-top: 0.5vh;
+}
+
+.dashboard-navbar-element {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.765vw;
+    padding-left: 1.055vw;
+    padding-right: 1.055vw;
+    padding-top: 1.4vh;
+    padding-bottom: 3vh;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.dashboard-navbar-element:hover {
+    transform: scale(1.065);
+}
+
+.dashboard-navbar-element span {
+    margin-left: 1vw;
+}
+
+.dashboard-navbar-element i {
+    position: relative;
+    bottom: 0.2vh;
+}
+
+.dashboard-navbar-element svg {
+    position: relative;
+    bottom: 0.25vh;
+}
+
+.dashboard-navbar-element::after {
+    position: absolute;
+    bottom: 0.55vh;
+    left: 3%;
+    width: 94%;
+    height: 0.6vh;
+    background: white;
+    content: "";
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.dashboard-navbar-element:hover::after {
+    opacity: 1;
+}
+
+.dashboard-column {
+    padding: 0 2vw;
+}
+
+#cap {
+    height: auto;
+    width: 2.2vw;
+}

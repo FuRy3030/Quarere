@@ -1,0 +1,23 @@
+﻿#Text {
+    font-size: 0.85vw;
+    background-color: var(--element-background);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    color: white;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    padding: 9px;
+}
+
+#Text:focus {
+    border-color: transparent;
+}
+
+#Text::placeholder {
+    color: #cccce4;
+}
+
+#Text:focus::placeholder {
+    color: white;
+}
