@@ -7,6 +7,22 @@ All the user needs is a custom, chosen piece of text. It could be anything: a sh
 
 On top of that, the application lets the learner use the embedded, significantly more detailed dictionary that contains even more meanings, translations, examples, and synonyms with plenty of sub-meanings accompanying them. In addition, it allows for the creation of the aforementioned learning materials directly from its elements. In other words, the user can choose which meanings, examples, synonyms, or translations he wants to use by simply clicking them.
 
+## Technologies
+
+- HTML
+- CSS
+- JavaScript
+- jQuery
+- Bootstrap
+- C#
+- .NET Framework
+- ASP.NET Web API
+- ASP.NET Web Forms
+- SQL
+
+## Videos
+
+https://user-images.githubusercontent.com/100144403/210101315-e0694b4d-bbf0-4380-a24f-7c813eb4f3ef.mp4
 
 ## Screenshots
 
